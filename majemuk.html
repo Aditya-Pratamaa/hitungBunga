@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="style.css">
+    <title>Menghitung Bunga Majemuk</title>
+</head>
+
+<body>
+    <aside class="">
+        <div class="dots">
+            <div class="dot__1"></div>
+            <div class="dot__2"></div>
+            <div class="dot__3"></div>
+        </div>
+        <div class="head__section">
+            <img src="logo ap.png" alt="">
+            <div class="search__bar">
+                <input type="text" placeholder="Fitur Non Aktif">
+                <div class="search__icon">
+                </div>
+            </div>
+            <i class="fi-rr-bell"></i>
+        </div>
+        <div class="nav__links">
+            <ul>
+                <li><a href="index.html"><i class="fi-rr-apps"></i><span>Bunga Tunggal</span></a></li>
+                <li><a href="#"><i class="fi-rr-browser"></i><span>Bunga Majemuk</span></a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="form-container">
+        <h2>Bunga Majemuk</h2>
+        <form>
+            <label for="principal">Jumlah Uang</label>
+            <input type="number" id="principal" required><br><br>
+            
+            <label for="rate">Suku Bunga (%) :</label>
+            <input type="number" id="rate" required><br><br>
+        
+            <label for="ratePeriod">Periode Suku Bunga:</label>
+            <select id="ratePeriod">
+                <option value="tahun">Tahun</option>
+                <option value="bulan">Bulan</option>
+                <option value="caturwulan">Caturwulan</option>
+                <option value="triwulan">Triwulan</option>
+                <option value="semester">Semester</option>
+            </select><br><br>
+            
+            <label for="time">Waktu:</label>
+            <input type="number" id="time" required><br><br>
+            
+            <label for="timePeriod">Periode Waktu:</label>
+            <select id="timePeriod">
+                <option value="tahun">Tahun</option>
+                <option value="bulan">Bulan</option>
+                <option value="caturwulan">Caturwulan</option>
+                <option value="triwulan">Triwulan</option>
+                <option value="semester">Semester</option>
+            </select><br><br>
+        
+            <label for="type">Tipe</label>
+            <select id="type">
+                <option value="simple">Modal Awal</option>
+                <option value="compound">Modal Akhir</option>
+            </select><br><br>
+        
+            <button type="button" onclick="calculateInterest()">Hitung</button>
+            <p id="result"></p>
+        </form>
+        
+    </div>
+
+    <script src="majemuk.js"></script>
+</body>
+
+</html>
